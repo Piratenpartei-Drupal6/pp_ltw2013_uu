@@ -36,7 +36,7 @@ function ltw2013_sammelbalken(info) {
 	var p_remain = 100 - p_current;
 
 	var balken = '<table cellspacing="0" style="width: 100%; border: 1px solid black; background: #fff; padding: 0; margin: 0;">';
-	balken += '<tbody><tr style="height: 10px; line-height: 10px; font-size: 8px; text-align: center;">';
+	balken += '<tbody style="border: none;"><tr style="height: 10px; line-height: 10px; font-size: 8px; text-align: center;">';
 	if (p_save == 0)
 		balken += '<td style="display: none; background-color: #fa0; padding: 0;">0&nbsp;%</td>';
 	else
@@ -51,7 +51,7 @@ function ltw2013_sammelbalken(info) {
 	balken += '</tr></tbody></table>';
 
 	balken += '<table style="width: 100%; padding: 0; margin: 0;">';
-	balken += '<tbody><tr style="line-height: 10px; font-size: 8px;">';
+	balken += '<tbody style="border: none;"><tr style="line-height: 10px; font-size: 8px;">';
 	/*balken += '<td><span style="background-color: #fa0; padding:0px 3px;">0 bestätigt</span></td>';
 	balken += '<td style="text-align: center;"><span style="background-color: #fd3; padding:0px 3px;">7 unbestätigt</span></td>';*/
 	balken += '<td style="text-align: right;"><b>'+info.current+'</b> von '+info.max+' gesammelt</td>';
