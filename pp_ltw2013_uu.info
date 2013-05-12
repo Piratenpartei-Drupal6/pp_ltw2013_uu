@@ -2,6 +2,5 @@
 package = Piratenpartei
 name = Piratenpartei LTW2013 UU
 description = Zeigt Sammelbalken zu auswählbaren Wahlkreisen und der Landesliste.
-dependencies[] = php
 core = 6.x
 version = "6.x-1.0"
