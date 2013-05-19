@@ -7,19 +7,19 @@ function ltw2013_show(arr) {
 				//console.log(data.data);
 				var content = '<ul class="menu">';
 				if (jQuery.inArray("ls", arr) != -1) {
-					content += '<li><a href="'+data.data.liste.uu+'">'+data.data.liste.title+'</a>'+ltw2013_sammelbalken(data.data.liste.info)+'</li>';
+					content += '<li><a href="'+data.data.liste.uu+'" style="white-space: nowrap;">'+data.data.liste.title+'</a>'+ltw2013_sammelbalken(data.data.liste.info)+'</li>';
 				}
 
 				for (var wk=1; wk<=55; wk++) {
 					if (jQuery.inArray(wk, arr) != -1) {
 						if (data.data[wk]) {
-							content += '<li><a href="'+data.data[wk].uu+'">'+data.data[wk].title+'</a>'+ltw2013_sammelbalken(data.data[wk].info)+'</li>';
+							content += '<li><a href="'+data.data[wk].uu+'" style="white-space: nowrap;">'+data.data[wk].title+'</a>'+ltw2013_sammelbalken(data.data[wk].info)+'</li>';
 						}
 					}
 				}
 				
 				if (jQuery.inArray("le", arr) != -1) {
-					content += '<li><a href="'+data.data.liste.uu+'">'+data.data.liste.title+'</a>'+ltw2013_sammelbalken(data.data.liste.info)+'</li>';
+					content += '<li><a href="'+data.data.liste.uu+'" style="white-space: nowrap;">'+data.data.liste.title+'</a>'+ltw2013_sammelbalken(data.data.liste.info)+'</li>';
 				}
 				content += "</ul>";
 
