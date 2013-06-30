@@ -37,15 +37,18 @@ function ltw2013_sammelbalken(info) {
 
 	var balken = '<table cellspacing="0" style="width: 100%; border: 1px solid black; background: #fff; padding: 0; margin: 0;">';
 	balken += '<tbody style="border: none;"><tr style="height: 10px; line-height: 10px; font-size: 8px; text-align: center;">';
-	if (p_save == 0)
+	if (p_save === 0)
 		balken += '<td style="display: none; background-color: #fa0; padding: 0;">0&nbsp;%</td>';
 	else
 		balken += '<td style="width: '+p_save+'%; background-color: #ffaa00; padding: 0;">'+p_save+'&nbsp;%</td>';
 
-	if (p_current == 0) {
+	if (p_current === 0) {
 		balken += '<td style="width: 100%; background-color: transparent; padding: 0;">0&nbsp;%</td>';
 	} else {
-		balken += '<td style="width: '+p_current_show+'%; background-color: #fd3; padding: 0;">'+p_current+'&nbsp;%</td>';
+		if (p_current_show === 0 || p_current_show === p_remain)
+			balken += '<td style="width: '+p_current_show+'%; background-color: #fd3; padding: 0;"></td>';
+		else
+			balken += '<td style="width: '+p_current_show+'%; background-color: #fd3; padding: 0;">'+p_current+'&nbsp;%</td>';
 		balken += '<td style="width: '+p_remain+'%; background-color: transparent; padding: 0;"></td>';
 	}
 	balken += '</tr></tbody></table>';
